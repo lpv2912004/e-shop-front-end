@@ -1,0 +1,33 @@
+.spinner-container {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: rgba(255, 255, 255, 0.85); /* Tăng độ mờ nền */
+    z-index: 9999;
+    backdrop-filter: blur(5px); /* Hiệu ứng mờ nền */
+  }
+  
+  .spinner-logo {
+    width: 120px; /* Điều chỉnh kích thước lớn hơn */
+    height: 120px;
+    animation: spin 1.5s cubic-bezier(0.6, 0.2, 0.1, 1) infinite; /* Thêm cubic-bezier để chuyển động mượt mà hơn */
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1); /* Bóng đổ nhẹ cho chiều sâu */
+    border-radius: 50%; /* Bo tròn logo để thêm phần tinh tế */
+    border: 5px solid rgba(0, 123, 255, 0.2); /* Thêm viền bên ngoài logo để tạo điểm nhấn */
+    border-top-color: rgba(0, 123, 255, 1); /* Chỉ viền trên cùng là có màu sắc nổi bật để tạo hiệu ứng xoay */
+  }
+  
+  @keyframes spin {
+    0% {
+      transform: rotate(0deg);
+    }
+    100% {
+      transform: rotate(360deg);
+    }
+  }
+  

@@ -1,0 +1,286 @@
+
+.support-form {
+    display: flex;
+    justify-content: space-between; /* Space between categories and contact info */
+    margin-top: 0;
+
+    gap: 20px;
+    width: 90%;
+    max-width: 1200px;
+    margin: 10px auto;
+  }
+
+
+
+
+/* Danh mục */
+.categories {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px; /* Khoảng cách giữa các danh mục */
+    padding: 20px; /* Tăng khoảng cách tổng thể */
+}
+
+.category-item {
+    background: linear-gradient(145deg, #f9f9f9, #eaeaea); /* Nền gradient nhẹ */
+    margin: 10px;
+    padding: 20px; /* Tăng kích thước padding cho cân đối */
+    border-radius: 15px; /* Góc bo mềm mại hơn */
+    width: 220px; /* Cố định chiều rộng để đồng đều */
+    height: 140px; /* Tăng chiều cao để bố cục cân đối hơn */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    border: 2px solid transparent; /* Đường viền trong suốt */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Bóng mờ nhẹ */
+    transition: all 0.3s ease-in-out;
+    text-align: center; /* Căn giữa nội dung */
+}
+
+/* Hiệu ứng hover */
+.category-item:hover {
+    background: linear-gradient(135deg, #4a90e2, #9013fe); /* Gradient sáng hơn */
+    box-shadow: 0 8px 20px rgba(255, 117, 143, 0.3); /* Hiệu ứng tỏa sáng */
+    transform: translateY(-5px); /* Nổi lên khi hover */
+    color: white; /* Màu chữ khi hover */
+    border-color: #ff6384; /* Đổi màu đường viền khi hover */
+}
+
+/* Icon trong danh mục */
+.category-item i {
+    font-size: 32px; /* Tăng kích thước icon */
+    color: #ff758f; /* Màu sắc icon nổi bật */
+    margin-bottom: 10px;
+    transition: transform 0.3s ease, color 0.3s ease;
+}
+
+.category-item:hover i {
+    color: white; /* Icon đổi màu khi hover */
+    transform: scale(1.2); /* Phóng to icon khi hover */
+}
+
+/* Tiêu đề dưới icon */
+.category-item span {
+    font-size: 16px;
+    font-weight: bold;
+    color: #555; /* Màu chữ bình thường */
+    text-transform: capitalize; /* Chữ cái đầu viết hoa */
+    transition: color 0.3s ease-in-out;
+}
+
+.category-item:hover span {
+    color: white; /* Màu chữ đổi khi hover */
+}
+
+/* Nội dung chi tiết danh mục */
+.category-detail {
+    text-align: left;
+    margin: 20px auto;
+    max-width: 900px;
+    padding: 20px;
+    background: linear-gradient(145deg, #ffffff, #f3f3f3); /* Gradient nền */
+    border-radius: 15px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15); /* Tăng độ bóng */
+    transition: all 0.3s ease-in-out;
+    color: #333; /* Màu chữ chính */
+    font-size: 16px;
+    line-height: 1.6;
+}
+
+/* Hiệu ứng khi hover vào chi tiết danh mục */
+.category-detail:hover {
+    transform: scale(1.02); /* Zoom nhẹ khi hover */
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2); /* Hiệu ứng nổi bật hơn */
+}
+
+/* Nút "Quay lại" */
+.back-button {
+    background-color: #ff5722;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 14px;
+    margin-bottom: 20px;
+    display: inline-block;
+    transition: background-color 0.3s ease;
+}
+
+.back-button i {
+    margin-right: 5px;
+}
+
+.back-button:hover {
+    background-color: #e64a19;
+}
+
+/* Tiêu đề nội dung danh mục */
+.category-content-header {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 24px;
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+
+.category-content-header .category-icon {
+    font-size: 30px;
+    margin-right: 10px;
+}
+
+/* Nội dung hiển thị của danh mục */
+.category-content {
+    margin-top: 10px;
+    padding: 20px;
+    background-color: #fff;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    font-size: 16px;
+    line-height: 1.6;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.category-content-item {
+    padding: 10px 0;
+    border-bottom: 1px solid #eee;
+    font-size: 16px;
+}
+
+.category-content-item:last-child {
+    border-bottom: none;
+}
+
+/* Hover effect cho các item trong nội dung */
+.category-content-item:hover {
+    background-color: #f5f5f5;
+    padding-left: 10px;
+    transition: all 0.3s ease;
+}
+
+/* Mobile responsiveness */
+@media (max-width: 768px) {
+    .category-detail {
+        width: 90%;
+    }
+    
+    .category-item {
+        width: 100%;
+        margin: 10px 0;
+    }
+    
+    
+}
+.content-title {
+    font-size: 24px; /* Điều chỉnh kích thước chữ */
+    font-weight: bold; /* In đậm */
+    margin: 20px 0; /* Thêm khoảng cách phía trên và dưới */
+}
+
+
+
+.support-content {
+    display: flex;
+    align-items: center; /* Align items horizontally */
+    gap: 20px; /* Space between image and contact-info */
+    max-width: 800px; /* Set max width for the container */
+    width: 100%;
+    padding: 20px;
+  }
+  
+  .support-image {
+    width: 200px; /* Điều chỉnh kích thước hình ảnh */
+    height: auto; /* Tự động điều chỉnh theo tỷ lệ */
+    border-radius: 10px; /* Góc bo mềm mại */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Thêm bóng cho hình ảnh */
+  }
+  
+  .contact-info {
+    margin: 20px 0;
+    padding: 30px;
+    background: linear-gradient(135deg, #4a90e2, #9013fe); /* Gradient sáng hơn */
+    border-radius: 25px; /* Rounded corners */
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.25); /* Highlight the box */
+    max-width: 550px;
+    text-align: left;
+    color: white; /* Light text */
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    height: 345px;
+   
+  }
+  
+  /* Hover effect */
+  .contact-info:hover {
+    transform: translateY(-8px); /* Float effect */
+    box-shadow: 0 15px 40px rgba(144, 19, 254, 0.5); /* Glow */
+  }
+  
+  /* Header style */
+  .contact-info h3 {
+    font-size: 26px;
+    font-weight: bold;
+    color: #f4faff; /* Light header */
+    margin-bottom: 15px;
+    text-transform: uppercase;
+    letter-spacing: 1.5px;
+    border-bottom: 3px solid #ffffff; /* White underline */
+    padding-bottom: 8px;
+  }
+  
+  /* Paragraph */
+  .contact-info p {
+    margin: 15px 0;
+    font-size: 18px;
+    display: flex;
+    align-items: center;
+    line-height: 1.8;
+  }
+  
+  /* Icons */
+  .contact-info p i {
+    font-size: 24px;
+    color: #ffdd00; /* Golden yellow for icons */
+    margin-right: 15px;
+    transition: transform 0.3s ease, color 0.3s ease;
+  }
+  
+  .contact-info p i:hover {
+    color: #ffbb00; /* Lighter on hover */
+    transform: scale(1.2); /* Pop effect */
+  }
+  
+  /* Links */
+  .contact-info a {
+    text-decoration: none;
+    color: #ffdd00; /* Golden yellow */
+    font-weight: 600;
+    transition: color 0.3s ease;
+  }
+  
+  .contact-info a:hover {
+    color: #ffbb00; /* Lighter yellow on hover */
+    text-decoration: underline;
+  }
+
+.maou{
+    font-family: Arial, sans-serif;
+    text-align: center;
+    margin-top: 100px;
+    margin-bottom: 100px;
+}
+
+  .support-header {
+    background: linear-gradient(135deg, #4a90e2, #9013fe); 
+    padding: 20px;
+    color: black;
+}
+
+.support-header h1 {
+    margin: 0;
+    font-size: 24px;
+}
+

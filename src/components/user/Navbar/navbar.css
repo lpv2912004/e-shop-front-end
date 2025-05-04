@@ -1,0 +1,379 @@
+   /* General styling */
+   .navbar-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    background-color: #fff;
+}
+
+/* Kidty Shop Title in the center */
+.navbar-center h1 {
+    font-size: 24px;
+    color: #000;
+    margin: 0;
+    font-family: 'Arial', sans-serif;
+    text-align: center;
+}
+
+/* Container for the navigation bar */
+.navbar {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 20px;
+    position: relative;
+}
+
+/* Positioning the icons on the left and right */
+.navbar-left,
+.navbar-right {
+    position: absolute;
+    top: 0;
+    display: flex;
+    align-items: center;
+}
+
+.navbar-left {
+    left: 20px;
+}
+
+.navbar-right {
+    right: 20px;
+}
+
+/* Styling the navigation items */
+.nav-item {
+    position: relative;
+    padding: 10px 20px;
+    cursor: pointer;
+    font-size: 16px;
+    color: #000;
+}
+
+.nav-item:hover .dropdown,
+.nav-item.active .dropdown {
+    display: block;
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.nav-item:hover::after,
+.nav-item.active::after {
+    content: '';
+    position: absolute;
+    bottom: -10px;
+    left: 0;
+    height: 3px;
+    width: 100%;
+    background-color: #ff69b4;
+    transition: width 0.3s ease-in-out;
+}
+
+.nav-item::after {
+    content: '';
+    position: absolute;
+    bottom: -10px;
+    left: 0;
+    height: 3px;
+    width: 0;
+    background-color: #ff69b4;
+    transition: width 0.3s ease-in-out;
+}
+
+/* Dropdown menu styling */
+.dropdown {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background-color: #fff;
+    width: 200px;
+    opacity: 0;
+    transform: translateY(-10px);
+    transition: opacity 0.5s ease, transform 0.5s ease;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+}
+
+.dropdown-item {
+    padding: 10px;
+    border-bottom: 1px solid #ddd;
+    white-space: nowrap;
+    color: #000;
+    text-align: left;
+}
+
+.dropdown-item:hover {
+    background-color: #f1f1f1;
+}
+
+.dropdown-item:last-child {
+    border-bottom: none;
+}
+
+/* Styling the icons on the right */
+.icon {
+    font-size: 18px;
+    margin-left: 20px;
+    cursor: pointer;
+}
+
+.cart-count {
+    position: absolute;
+    top: -8px;
+    right: -8px;
+    background-color: red;
+    color: white;
+    font-size: 10px;
+    width: 16px;
+    height: 16px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+}
+
+/* Search input styling */
+.search-input {
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    padding: 8px;
+    font-size: 14px;
+    width: 200px;
+    transition: width 0.3s ease;
+}
+
+.search-input:focus {
+    outline: none;
+    border-color: #ff69b4;
+    width: 250px;
+    /* Slightly widen the input when focused */
+}
+
+/* Search button styling */
+.search-button {
+    background-color: #ff69b4;
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    padding: 8px 16px;
+    margin-left: 8px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.search-button:hover {
+    background-color: #ff4a93;
+}
+
+/* Display the search box when active */
+.search-active {
+    display: flex;
+}
+
+.navbar-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    padding: 10px 20px;
+    background-color: #fff;
+    border-bottom: 1px solid #ddd;
+}
+
+/* Left and Right icons */
+.navbar-icons {
+    display: flex;
+    align-items: center;
+}
+
+.navbar-icons i {
+    font-size: 20px;
+    cursor: pointer;
+    margin: 0 15px;
+    transition: color 0.3s ease;
+}
+
+.navbar-icons i:hover {
+    color: #ff69b4;
+}
+
+.search-active {
+    display: flex;
+}
+
+/* Search container positioning */
+.search-container {
+    position: absolute;
+    top: 50px;
+    right: 150px;
+    display: none;
+    flex-direction: row;
+    align-items: center;
+    background-color: #fff;
+    border-radius: 4px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    padding: 10px;
+    z-index: 1000;
+}
+
+.search-active {
+    display: flex;
+}
+
+/* Cart count */
+.cart-count {
+    background-color: #ff69b4;
+    color: white;
+    border-radius: 50%;
+    padding: 0 5px;
+    font-size: 12px;
+    position: relative;
+    top: -10px;
+    left: -5px;
+}
+
+/* Menu item hover effect */
+.nav-item {
+    position: relative;
+    padding: 10px 20px;
+    cursor: pointer;
+    font-size: 16px;
+    color: #000;
+}
+
+.nav-item:hover::after {
+    content: '';
+    position: absolute;
+    bottom: -10px;
+    left: 0;
+    height: 3px;
+    width: 100%;
+    background-color: #ff69b4;
+    transition: width 0.3s ease-in-out;
+}
+
+/* Dropdown menu */
+.dropdown {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background-color: #fff;
+    width: 200px;
+    opacity: 0;
+    transform: translateY(-10px);
+    transition: opacity 0.5s ease, transform 0.5s ease;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+}
+
+.dropdown-item {
+    padding: 10px;
+    border-bottom: 1px solid #ddd;
+    color: #000;
+    text-align: left;
+}
+
+.dropdown-item:hover {
+    background-color: #f1f1f1;
+}
+
+
+
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+ .navbar-container {
+     flex-direction: row;
+     justify-content: space-between;
+ }
+
+ .navbar-center {
+     display: none; /* Hide the title on smaller screens */
+ }
+
+ .navbar-icons {
+     margin-left: auto;
+ }
+
+ .navbar {
+     flex-direction: column;
+     margin-top: 0;
+ }
+
+ .nav-item {
+     padding: 10px;
+     font-size: 14px;
+ }
+
+ .dropdown {
+     position: static;
+     width: 100%;
+     box-shadow: none;
+ }
+
+ .dropdown-item {
+     padding: 8px;
+ }
+
+ /* Show mobile hamburger menu */
+ .hamburger-menu {
+     display: block;
+ }
+
+ .navbar-open {
+     display: flex;
+     flex-direction: column;
+     align-items: center;
+     justify-content: center;
+ }
+
+ .mobile-menu {
+     display: block;
+     width: 100%;
+     background-color: #fff;
+     padding: 10px 0;
+     border-top: 1px solid #ddd;
+ }
+
+ .mobile-menu .nav-item {
+     padding: 10px 20px;
+ }
+
+ /* Hide search container on smaller screens */
+ .search-container {
+     top: 60px;
+     right: 0;
+     width: 100%;
+     justify-content: center;
+ }
+}
+
+@media (max-width: 480px) {
+ .nav-item {
+     padding: 8px;
+     font-size: 12px;
+ }
+
+ .cart-count {
+     font-size: 8px;
+     width: 14px;
+     height: 14px;
+ }
+
+ .search-input {
+     width: 100px;
+ }
+
+ .search-button {
+     padding: 6px 12px;
+ }
+
+ .mobile-menu .nav-item {
+     padding: 8px;
+     font-size: 14px;
+ }
+}
+/* Thêm lớp chỉ dành cho trang người dùng */
+
+

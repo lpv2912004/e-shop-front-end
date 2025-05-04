@@ -1,0 +1,81 @@
+.voucher-container {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    background-color: white;
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    margin-bottom: 16px;
+  }
+  
+  .voucher-left {
+    position: relative;
+    background-color: #ff5722;
+    padding: 16px;
+    width: 100px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+  }
+  
+  .voucher-left::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -16px;
+    height: 100%;
+    width: 16px;
+    background-color: #ff5722;
+    clip-path: polygon(0% 0%, 50% 25%, 0% 50%, 50% 75%, 0% 100%);
+  }
+  
+  .voucher-left::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 16px;
+    height: 100%;
+    background-color: #ff5722;
+    clip-path: circle(50% at 50% 10%), circle(50% at 50% 30%), circle(50% at 50% 50%), circle(50% at 50% 70%), circle(50% at 50% 90%);
+  }
+  
+  .voucher-content {
+    padding: 16px;
+    flex: 1;
+  }
+  
+  .title {
+    font-size: 16px;
+    font-weight: bold;
+    margin-bottom: 4px;
+  }
+  
+  .description {
+    font-size: 14px;
+    margin-bottom: 4px;
+  }
+  
+  .expiry {
+    font-size: 12px;
+    color: #777;
+  }
+  
+  .condition-link {
+    color: #007bff;
+    text-decoration: underline;
+  }
+  
+  .icon {
+    width: 32px;
+    height: 32px;
+  }
+  
+  .category {
+    font-size: 14px;
+    font-weight: bold;
+    margin-left: 8px;
+  }
+  
